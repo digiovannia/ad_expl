@@ -225,11 +225,11 @@ if __name__ == '__main__':
             read_round_rob(laff.final_algo_list, name, 0, 49,
               'test_B')
         os.chdir('..')
-    # Generate Fig. 3
+    # Generate Fig. 4
     np.random.seed(1)
     population_min, roundrobins_arr, emp_game, nes = read_exp_summaries(laff.final_algo_list, 0, 49, num_reps=1000)
     '''
     Need to be in same directory as the "summaries" subdirectory
     '''
-    # Generate Fig. 2
+    # Generate Fig. 3
     regret_results(dirs)
