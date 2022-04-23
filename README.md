@@ -1,4 +1,4 @@
-# Code for "Balancing Adapatability and Non-exploitability in Repeated Games"
+# Code for "Balancing Adaptability and Non-exploitability in Repeated Games"
 
 Workflow:
 1) Create a subdirectory called "barg_results_pre"
