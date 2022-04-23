@@ -166,6 +166,9 @@ def regret_results(result_directories, tee=int(2e5)):
     codes = ['/Eps-Greedy Q/LAFF/P2/', '/LAFF/LAFF/P1/',
              '/LAFF/Generous Godfather/P1/', '/Bully Manipulator/LAFF/P2/',
              '/Bully Godfather/LAFF/P1/']
+    
+    opponents = ['Unconditional Follower (Q-Learning)', 'Conditional Follower (LAFF)', 'Bounded Memory (FTFT)',
+                'Adversarial (Manipulator)', 'Exploitative (Bully)']
 
     j=0
     for code, dct in zip(codes, [uncon_baselines, con_baselines,
@@ -188,6 +191,7 @@ def regret_results(result_directories, tee=int(2e5)):
               prop={'size': 9}, frameon=False)
         plt.xlabel('Time', fontsize=16)
         plt.ylabel('P1 Regret' if code != '/Bully Godfather/LAFF/P1/' else 'P2 Regret', fontsize=16)
+        plt.title(opponents[j])
         plt.ticklabel_format(axis="x", style="sci", scilimits=(0,0))
         plt.savefig(str(j) + '.png', bbox_inches='tight')
         plt.show()
